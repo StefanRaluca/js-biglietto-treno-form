@@ -5,27 +5,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Biglietto Treno</title>
 </head>
 
-<body>
+<body class="bg-primary">
 
-   
-        <input type="text" id="inputName" placeholder="Nome e Cognome">
-        <input type="text" id="inputKm" placeholder="Km da percorrere">
+ 
 
-        <label for="age">Fascia d'età </label>
-        <select name="age" id="inputAge">
-            <option value=""></option>
-            <option value="child">0-18</option>
-            <option value="adults">19-64</option>
-            <option value="senior">65 e oltre</option>
-        </select>
-        <button id="genera">Genera</button>
-        <button id="refreshPage">Annulla</button>
-  
+
+<div class="container">
+
+
     
-        <div id="numeroCasuale"></div>
+    <div class="enter_data row">
+
+        <h2 class="text-center py-4 ">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+
+        <div class="card">
+
+            <!-- Parte superiore della card -->
+            <div class="top_card .justify-content-center d-flex d-flex mt-5 mb-2">
+
+                <div class="col ml-6">
+                    <input class="" type="text" id="inputName" placeholder="Nome e Cognome">
+      
+                </div>
+                <div class="col">
+                    <input type="text" id="inputKm" placeholder="Km da percorrere">
+                </div>
+                <div class="col">
+                    <label for="age">Fascia d'età </label>
+                    <select name="age" id="inputAge">
+                        <option value=""></option>
+                        <option value="child">0-18</option>
+                        <option value="adults">19-64</option>
+                        <option value="senior">65 e oltre</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- parte inferiore della card -->
+            <div class="row_bottom d-flex justify-content-evenly mt-5 mb-2">
+                <button id="genera">Genera</button>
+                <button id="refreshPage">Annulla</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="generates_data row">
+        <h2 class="text-center py-4 ">IL TUO BIGLIETTO</h2>
+        <div class="card">
+            <h5>DETTAGLI PASSEGGERO</h5>
+            <div class="card-container">
+                <div class="column_1">
+                    <h4>NOME PASSEGGERO</h4>
+                    <span id="passaggero"></span>
+                </div>
+                <div class="column_3" >
+                    <h5>Carrozza</h5>
+                    <span id="carriage"></span>
+                </div>
+                <div class="column_4">
+                    <h5>Codice CP</h5>
+                    <span id="code_cp"></span>
+                </div>
+                <div class="column_5">
+                    <h5>Costo biglietto</h5>
+                    <span id="final_price"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
 
     <script src="./assets/js/main.js"></script>
 </body>
