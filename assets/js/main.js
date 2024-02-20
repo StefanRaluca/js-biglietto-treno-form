@@ -7,11 +7,21 @@ document.getElementById("genera").addEventListener("click", function () {
     userName = document.getElementById("inputName").value;
     kilometers = document.getElementById("inputKm").value;
     age = document.getElementById("inputAge").value;
+   
+
+
+
+
     
+    const CP_code =  Math.floor(Math.random() * 10);
+  // const offerta = 
+
     //Stabiliamo il prezzo del biglietto e i valori dello sconto
-    let price_km = 0.21;
+    const price_km = 0.21;
     const discount_child = 0.2;
     const discount_senior = 0.4;
+
+
 
     //Eseguiamo delle operazioni math con delle condizioni:
     //Usare il document.writeIn per stampare il prezzo 
@@ -21,6 +31,7 @@ document.getElementById("genera").addEventListener("click", function () {
         let price_total = price_passenger - (price_passenger * discount_child);
         console.log(price_total);
         document.writeln(`Total Price: ${price_total.toFixed(2)} €`);
+        
     }
 
     else if (age >= 65) {
@@ -35,4 +46,16 @@ document.getElementById("genera").addEventListener("click", function () {
         console.log(price_total);
         document.writeln(`Total Price: ${price_total.toFixed(2)} €`);
     }
+
 })
+
+
+
+document.getElementById("refreshPage").addEventListener("click", function () {
+    location.reload();
+    //console.log('user aggiorna la pagina');
+});
+
+
+
+
