@@ -22,7 +22,8 @@ document.getElementById("genera").addEventListener("click", function () {
     document.getElementById('passaggero').innerHTML = userName.value;
 
 
-
+//offerta
+document.getElementById("offerta").innerHTML=
 
     //Stabiliamo il prezzo del biglietto e i valori dello sconto
     const price_km = 0.21;
