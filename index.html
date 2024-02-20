@@ -10,17 +10,36 @@
     <title>Biglietto Treno</title>
 </head>
 <style>
-    #color_page{
+    #color_page {
         background-color: rgb(211, 53, 140);
+    }
 
-        .col_border{
-            border-top: 3px solid grey;
-            border-bottom: 3px solid grey;
-            padding: 18px;
-        }
+    .col_border {
+        border-top: 3px solid grey;
+        border-bottom: 3px solid grey;
+        padding: 18px;
+    }
 
+    /* .generates_data{
+        display: none;
+    } */
+
+    .top_label label {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        outline-style: hidden;
+        font-weight: 640;
+    }
+
+    .age {
+
+        align-self: center;
+        width: 400px;
+        margin-top: -20px;
+        height: 35px;
     }
 </style>
+
 <body id="color_page">
 
 
@@ -30,25 +49,27 @@
 
 
 
-        <div class="enter_data row">
+        <div class="enter_data row ">
 
             <h2 class="text-center py-4 text-white">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
 
-            <div class="card">
+            <div class="card shadow-lg p-3 mb-5 bg-body-tertiary rounded">
 
                 <!-- Parte superiore della card -->
-                <div class="top_card .justify-content-center d-flex d-flex mt-5 mb-2">
+                <div class="top_card .justify-content-center d-flex d-flex mt-5 mb-2 gap-3">
 
                     <div class="col ml-6">
-                        <input class="" type="text" id="inputName" placeholder="Nome e Cognome">
+                        <h6 class="text-center"> Nome e Cognome</h6>
+                        <input class="form-control rounded border-0" type="text" id="inputName" placeholder="Nome e Cognome">
 
                     </div>
                     <div class="col">
-                        <input type="text" id="inputKm" placeholder="Km da percorrere">
+                        <h6 class="text-center"> Km da percorrere</h6>
+                        <input class="form-control rounded border-0 mr-1" type="text" id="inputKm" placeholder="Km da percorrere">
                     </div>
-                    <div class="col">
-                        <label for="age">Fascia d'età </label>
-                        <select name="age" id="inputAge">
+                    <div class="col top_label d-flex flex-column">
+                        <label for="age ">Fascia d'età </label>
+                        <select class="age rounded border-0" id="inputAge">
                             <option value=""></option>
                             <option value="child">0-18</option>
                             <option value="adults">19-64</option>
@@ -59,8 +80,8 @@
 
                 <!-- parte inferiore della card -->
                 <div class="row_bottom d-flex justify-content-evenly mt-5 mb-2">
-                    <button id="genera">Genera</button>
-                    <button id="refreshPage">Annulla</button>
+                    <button class="btn btn-success" id="genera">Genera</button>
+                    <button class="btn btn-outline-secondary" id="refreshPage">Annulla</button>
                 </div>
             </div>
         </div>
@@ -71,31 +92,31 @@
             <div class="card p-5">
 
                 <div class="card_left ">
-                    <h5 class="py-4">DETTAGLI PASSEGGERO</h5> </div>
-                    <div class="row d-flex ">
-
-                        <div class="col bg-secondary ml-2" style="height: 120px;">
-                            <h4 class="py-2" style="width: 250px;">NOME PASSEGGERO</h4>
-                            <span id="passaggero"></span>
-                        </div>
-                        <div class="col col_border">
-                            <h5>Offerta</h5>
-                            <span id="offerta"></span>
-                        </div>
-                        <div class="col col_border">
-                            <h5>Carrozza</h5>
-                            <span id="carriage"></span>
-                        </div>
-                        <div class="col col_border">
-                            <h5>Codice CP</h5>
-                            <span id="code_cp"></span>
-                        </div>
-                        <div class="col col_border">
-                            <h5>Costo biglietto</h5>
-                            <span id="final_price"></span>
-                        </div>
+                    <h5 class="py-4">DETTAGLI PASSEGGERO</h5>
+                </div>
+                <div class="row d-flex ">
+                    <div class="col bg-secondary ml-2" style="height: 120px;">
+                        <h4 class="py-2" style="width: 250px;">NOME PASSEGGERO</h4>
+                        <span id="passaggero"></span>
                     </div>
-               
+                    <div class="col col_border">
+                        <h5>Offerta</h5>
+                        <span id="offerta"></span>
+                    </div>
+                    <div class="col col_border">
+                        <h5>Carrozza</h5>
+                        <span id="carriage"></span>
+                    </div>
+                    <div class="col col_border">
+                        <h5>Codice CP</h5>
+                        <span id="code_cp"></span>
+                    </div>
+                    <div class="col col_border">
+                        <h5>Costo biglietto</h5>
+                        <span id="final_price"></span>
+                    </div>
+                </div>
+
             </div>
         </div>
 
