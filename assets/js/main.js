@@ -9,7 +9,7 @@ document.getElementById("genera").addEventListener("click", function () {
     userName = document.getElementById("inputName").value;
     kilometers = document.getElementById("inputKm").value;
     age = document.getElementById("inputAge").value;
-
+Offerta = document.getElementById("offerta").value
     // Aggiorniamo il contenuto del div "carriage" con il nuovo numero random
     const randomNum = Math.floor(Math.random() * 9) + 1;
 
@@ -21,11 +21,12 @@ document.getElementById("genera").addEventListener("click", function () {
     document.getElementById('code_cp').innerHTML = cp;
     //il nome del passagero 
 
-    document.getElementById('passaggero').innerHTML = userName.value;
+    document.getElementById('passaggero').innerHTML = userName;
+    console.log(userName);
 
 
     //offerta
-    // document.getElementById("offerta").innerHTML =
+    document.getElementById("offerta").innerHTML = Offerta
 
 
 
